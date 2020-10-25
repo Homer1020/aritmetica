@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+	<title>Multiplicación</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<main>
+		<section id="select-level" class="select-level">
+			<nav class="level-navigation">
+				<ul>
+					<li>
+						<a href="#easy" class="link">
+							Facil
+							<span>Mayor Puntuación: <span class="max-score" data-score="easy"></span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#medium" class="link">
+							Intermedio
+							<span>Mayor Puntuación: <span class="max-score" data-score="medium"></span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#hard" class="link">
+							Dificil
+							<span>Mayor Puntuación: <span class="max-score" data-score="hard"></span></span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<div>
+			<table class="mult-table" id="mult-table">
+				<tbody></tbody>
+			</table>
+			<p id="operations" class="operation">
+				<span id="number-1" class="operation__number"></span>
+				<span class="operation__symbol">&times;</span>
+				<span id="number-2" class="operation__number"></span>
+				<span class="operation__symbol">=</span>
+				<input type="number" class="operation__result" id="result" min="1" placeholder="?">
+				<button type="button" class="operation__test" id="test">Probar <i class="fa fa-check"></i></button>
+			</p>
+		</div>
+		<div>
+			<section class="card card__body">
+				<h2 class="card__title">Multiplicación</h2>
+				<p class="score">Puntuación: <span class="score-count">0</span></p>
+				<button class="again">Recargar <i class="fa fa-redo"></i></button>
+			</section>
+		</div>
+		<div class="modal">
+			<div class="modal__content">
+				<h1></h1>
+				<p class="score">Puntuación: <span class="score-count"></span></p>
+				<button class="again">Jugar de nuevo <i class="fa fa-redo"></i></button>
+			</div>
+		</div>
+
+		<button class="home" id="home" onclick="window.location.reload()">Regresar <i class="fa fa-house-damage"></i></button>
+	</main>
+
+	<!-- Scripts -->
+	<script src="js/app.js"></script>
+</body>
+</html>
